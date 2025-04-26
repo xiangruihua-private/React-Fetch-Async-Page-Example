@@ -1,0 +1,9 @@
+
+{
+  "name": "Vue-Fetch-Async-Page-Example",
+  "version": "0.0.0",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}

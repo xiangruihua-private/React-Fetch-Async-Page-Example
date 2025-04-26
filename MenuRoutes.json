@@ -1,0 +1,16 @@
+[
+  {"menu":"Go to Home","path": "/", "name": "home","displayName":"Home"},
+  {"menu":"Go to Counter","path": "/Counter", "name": "Counter","displayName":"Counter","fetchPath": "./Counter.js"},
+  {"menu":"Go to MyFetchData","path": "/MyFetchData", "name": "MyFetchData","displayName":"MyFetchData","fetchPath": "./MyFetchData.js"},
+  {"menu":"Go to Clock","path": "/clock", "name": "Clock","displayName":"Clock","fetchPath": "./Clock.js"},
+  {"menu":"Go to ToggleButton","path": "/toggle", "name": "ToggleButton","displayName":"ToggleButton","fetchPath": "./ToggleButton.js"},
+  {"menu":"Go to MyForm","path": "/form", "name": "MyForm","displayName":"MyForm","fetchPath": "./MyForm.js"},
+  {"menu":"Go to ParentComponent","path": "/parent", "name": "ParentComponent","displayName":"ParentComponent","fetchPath": "./ParentComponent.js"},
+  {"menu":"Go to Hello","path": "/Hello", "name": "Hello","displayName":"Hello","fetchPath": "./Hello.js"},
+  {"menu":"Go to Memo","path": "/Memo", "name": "Memo","displayName":"Memo","fetchPath": "./Memo.js"},
+  {"menu":"Go to ContextReducer","path": "/ContextReducer", "name": "ContextReducer","displayName":"ContextReducer","fetchPath": "./ContextReducer.js"},
+  {"menu":"Go to ReduxReducer","path": "/ReduxReducer", "name": "ReduxReducer","displayName":"ReduxReducer","fetchPath": "./ReduxReducer.js"},
+  {"menu":"Go to BoardGame","path": "/BoardGame", "name": "BoardGame","displayName":"BoardGame","fetchPath": "./BoardGame.js"},
+  {"menu":"Go to Table","path": "/Table", "name": "Table","displayName":"Table","fetchPath": "./Table.js"},
+  {"menu":"Go to UIExample","path": "/UIExample", "name": "UIExample","displayName":"UIExample","fetchPath": "./UIExample.js"}
+]

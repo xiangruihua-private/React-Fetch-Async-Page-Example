@@ -1,0 +1,17 @@
+import express from 'express';
+
+const server = express();
+
+// server.get('/*', (req, res) => {
+//   res.sendFile('index.html', { root: '.' });
+// });
+
+server.get('/api/data', (req, res) => {
+  res.send({"entry": [{"updatornum":"mfiv202503310001","no":1,"updatorname":"mfiv202503310001","xiangmumingcheng":"项目4","created":"2025-03-31 19:36:45","lichengbeimingcheng":"里程碑4","creatorname":"mfiv202503310001","xiangmujingli":"陈六","id":"4","updated":"2025-03-31 19:38:01","creatornum":"mfiv202503310001","jiaofushijian":"2025-04-05"},{"updatornum":"mfiv202503310001","no":2,"updatorname":"mfiv202503310001","xiangmumingcheng":"项目2","created":"2025-03-31 19:36:06","lichengbeimingcheng":"里程碑2","creatorname":"mfiv202503310001","xiangmujingli":"李四","id":"2","updated":"2025-03-31 19:36:06","creatornum":"mfiv202503310001","jiaofushijian":"2025-04-03"},{"updatornum":"mfiv202503310001","no":3,"updatorname":"mfiv202503310001","xiangmumingcheng":"项目3","created":"2025-03-31 19:36:20","lichengbeimingcheng":"里程碑3","creatorname":"mfiv202503310001","xiangmujingli":"王五","id":"3","updated":"2025-03-31 19:36:20","creatornum":"mfiv202503310001","jiaofushijian":"2025-04-04"},{"updatornum":"mfiv202503310001","no":4,"updatorname":"mfiv202503310001","xiangmumingcheng":"项目1","created":"2025-03-31 19:35:48","lichengbeimingcheng":"里程碑1","creatorname":"mfiv202503310001","xiangmujingli":"张三","id":"1","updated":"2025-03-31 19:35:48","creatornum":"mfiv202503310001","jiaofushijian":"2025-04-02"}],"totalCount":4});
+});
+
+server.use(express.static('.'));
+
+server.listen(3000, () => {
+  console.log('ready');
+});
