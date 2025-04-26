@@ -8,13 +8,16 @@ class BasePage extends React.Component {
 const AppContext = {
   MenuRoutes: [],
   setCurrentMenu: function(path) {
-    let { menu } = this.MenuRoutes.find(item => item.path === path) || { path: '/', menu: 'Home' };
+    let { menu } = this.MenuRoutes.find(item => item.path === path) || { path: '/', menu: 'Go to Home' };
     document.getElementById('cur-path').innerText = menu;
   },
 }
 
 const NavBar = () => {
   const { t,i18n } = ReactI18next.useTranslation();
+  const goHome = () => {
+    AppContext.setCurrentMenu('/');
+  };
   return React.createElement('div',{className:'navbar bg-base-100 shadow-sm'},
     React.createElement('div',{className:'flex-none'},
       React.createElement('button',{className:'btn btn-square btn-ghost'},
@@ -26,7 +29,7 @@ const NavBar = () => {
     ),
     React.createElement('div', {className:'breadcrumbs text-sm flex-1'},
       React.createElement('ul',null,
-        React.createElement('li',{key:'Home'},React.createElement('a',{href:'./#/'},"Home")),
+        React.createElement('li',{key:'Home'},React.createElement('a',{href:'./#/',onClick:goHome},"Home")),
         React.createElement('li',{key:'curr',id:'cur-path'},'')
       )
     ),
@@ -79,8 +82,11 @@ const NavBar = () => {
 }
 const MenuRoutesView = ({MenuRoutes}) => {
   const menus = [], routes = [];
+  const goTo = (path) => {
+    AppContext.setCurrentMenu(path);
+  }
   MenuRoutes.forEach((item) => {
-    menus.push(React.createElement('li',{key:item.path},React.createElement(ReactRouterDOM.Link,{to:item.path,meta:{menu:item.menu}},item.menu)));
+    menus.push(React.createElement('li',{key:item.path},React.createElement(ReactRouterDOM.Link,{to:item.path,onClick:() => goTo(item.path)},item.menu)));
     if (item.fetchPath) {
       routes.push(React.createElement(ReactRouterDOM.Route,{path:item.path,component:React.lazy(() => import(item.fetchPath))}));
     }
