@@ -109,7 +109,7 @@ const loadMenuRoutes = async () => {
   let res = await axios.get('MenuRoutes.json');
   return res.data;
 }
-const fetchLocale = async (locale) => await import(`locale/${locale}.js`);
+const fetchLocale = async (locale) => await import(`./locale/${locale}.js`);
 Promise.all([ loadMenuRoutes(),fetchLocale('zh'),fetchLocale('en')])
   .then(([ MenuRoutes,zhMsg,enMsg]) => {
     AppContext.MenuRoutes = MenuRoutes;
