@@ -26,7 +26,7 @@ const NavBar = () => {
     ),
     React.createElement('div', {className:'breadcrumbs text-sm flex-1'},
       React.createElement('ul',null,
-        React.createElement('li',{key:'Home'},React.createElement('a',{to:'/'},"Home")),
+        React.createElement('li',{key:'Home'},React.createElement('a',{href:'./#/'},"Home")),
         React.createElement('li',{key:'curr',id:'cur-path'},'')
       )
     ),
