@@ -15,7 +15,7 @@ export default function MyFetchData() {
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/data'); // 替换为你的 API 地址
+        const response = await fetch('ApiData.json');
         const result = await response.json();
         setData(result);
         setLoading(false);
