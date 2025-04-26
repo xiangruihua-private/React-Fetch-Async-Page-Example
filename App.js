@@ -56,7 +56,7 @@ const NavBar = () => {
     React.createElement('div',{className:'dropdown dropdown-end'},
       React.createElement('div',{tabIndex:'0',className:'btn btn-ghost btn-circle avatar'},
         React.createElement('div',{className:'w-10 rounded-full'},
-          React.createElement('img',{src:'assets/png/xiang-smile.png'})
+          React.createElement('img',{src:'React-Fetch-Async-Page-Example/assets/png/xiang-smile.png'})
         ),
       ),
       React.createElement('ul',{tabIndex:'0',className:'menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow'},
@@ -106,10 +106,10 @@ const MenuRoutesView = ({MenuRoutes}) => {
   );
 }
 const loadMenuRoutes = async () => {
-  let res = await axios.get('MenuRoutes.json');
+  let res = await axios.get('React-Fetch-Async-Page-Example/MenuRoutes.json');
   return res.data;
 }
-const fetchLocale = async (locale) => await import(`locale/${locale}.js`);
+const fetchLocale = async (locale) => await import(`React-Fetch-Async-Page-Example/locale/${locale}.js`);
 Promise.all([ loadMenuRoutes(),fetchLocale('zh'),fetchLocale('en')])
   .then(([ MenuRoutes,zhMsg,enMsg]) => {
     AppContext.MenuRoutes = MenuRoutes;
